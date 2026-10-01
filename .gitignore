@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Biến môi trường (chứa chuỗi kết nối MongoDB Atlas, JWT secret)
+.env
+.env.local
+*.env
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Hệ điều hành / editor
+.DS_Store
+.idea/
+.vscode/

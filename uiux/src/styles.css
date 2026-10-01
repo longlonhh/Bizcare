@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * BizCare ERP — Design System
+ * Palette: Emerald Prestige (emerald + antique gold trên nền kem ấm)
+ * Type: Sora (tiêu đề) + Manrope (nội dung) + JetBrains Mono (số liệu)
+ *
+ * LƯU Ý: các biến màu lưu "thành phần oklch" (không bọc oklch()) để
+ * Tailwind chèn được độ trong suốt, ví dụ bg-primary/10.
+ */
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Slate & Indigo Modern SaaS Theme */
+    --background: 0.985 0.003 240; /* Zn Polish */
+    --foreground: 0.15 0.02 240;
+
+    --card: 1 0 0; /* White Pure */
+    --card-foreground: 0.15 0.02 240;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.02 240;
+
+    /* Indigo Electric */
+    --primary: 0.55 0.12 230; /* Indigo 500 -> OKLCH */
+    --primary-foreground: 1 0.003 240;
+    --primary-deep: 0.50 0.10 230; /* Indigo 600 */
+
+    /* Slate Subdued */
+    --secondary: 0.95 0.005 240;
+    --secondary-foreground: 0.45 0.02 240;
+
+    --muted: 0.93 0.008 240;
+    --muted-foreground: 0.45 0.02 240;
+
+    --accent: 0.95 0.005 240;
+    --accent-foreground: 0.45 0.02 240;
+
+    /* Remove Gold, replace with Electric Blue accent for highlights */
+    --gold: 0.55 0.12 230;
+    --gold-foreground: 1 0.003 240;
+
+    --destructive: 0.6 0.15 25;
+    --destructive-foreground: 1 0 0;
+    --success: 0.55 0.13 158;
+    --success-foreground: 1 0.003 240;
+    --warning: 0.70 0.13 75;
+    --warning-foreground: 0.15 0.02 240;
+    --info: 0.55 0.12 230;
+    --info-foreground: 1 0.003 240;
+
+    /* Borders slank */
+    --border: 0.85 0.005 240; /* Slate 200 */
+    --input: 0.85 0.005 240;
+    --ring: 0.55 0.12 230; /* Indigo 500 */
+
+    /* Chart Colors: Indigo, Cyan, Rose, Amber, Emerald */
+    --chart-1: 0.55 0.12 230; /* Indigo */
+    --chart-2: 0.55 0.13 195; /* Cyan */
+    --chart-3: 0.55 0.17 330; /* Rose */
+    --chart-4: 0.75 0.10 85; /* Amber */
+    --chart-5: 0.55 0.13 158; /* Emerald */
+
+    /* Sidebar Dark Slate */
+    --sidebar: 0.12 0.02 240;
+    --sidebar-foreground: 0.95 0.003 240;
+    --sidebar-primary: 0.55 0.12 230;
+    --sidebar-primary-foreground: 1 0.003 240;
+    --sidebar-accent: 0.18 0.02 240;
+    --sidebar-accent-foreground: 0.95 0.003 240;
+    --sidebar-border: 0.25 0.02 240;
+    --sidebar-ring: 0.55 0.12 230;
+
+    --gradient-indigo: linear-gradient(135deg, oklch(0.50 0.10 230), oklch(0.55 0.12 230));
+    --gradient-cyan: linear-gradient(135deg, oklch(0.55 0.13 195), oklch(0.60 0.15 195));
+    --shadow-card: 0 1px 3px oklch(0.15 0.02 240 / 0.05), 0 8px 24px -14px oklch(0.15 0.02 240 / 0.08);
+    --shadow-raised: 0 20px 45px -22px oklch(0.15 0.02 240 / 0.15);
+  }
+
+  .dark {
+    /* Obsidian / Deep Slate Dark Mode */
+    --background: 0.15 0.02 240; /* Obsidian */
+    --foreground: 0.92 0.008 240;
+
+    --card: 0.20 0.02 240; /* Titan Card */
+    --card-foreground: 0.92 0.008 240;
+    --popover: 0.20 0.02 240;
+    --popover-foreground: 0.92 0.008 240;
+
+    --primary: 0.55 0.12 230; /* Indigo Electric */
+    --primary-foreground: 0.10 0.01 240;
+    --primary-deep: 0.45 0.10 230;
+
+    --secondary: 0.25 0.02 240;
+    --secondary-foreground: 0.92 0.008 240;
+
+    --muted: 0.25 0.02 240;
+    --muted-foreground: 0.65 0.02 240;
+
+    --accent: 0.30 0.02 240;
+    --accent-foreground: 0.92 0.008 240;
+
+    --gold: 0.55 0.12 230;
+    --gold-foreground: 0.10 0.01 240;
+
+    --destructive: 0.65 0.15 25;
+    --destructive-foreground: 0.92 0.008 240;
+    --success: 0.55 0.13 158;
+    --success-foreground: 0.92 0.008 240;
+    --warning: 0.70 0.13 75;
+    --warning-foreground: 0.92 0.008 240;
+    --info: 0.55 0.12 230;
+    --info-foreground: 0.92 0.008 240;
+
+    --border: 0.30 0.02 240; /* Slate 700 */
+    --input: 0.35 0.02 240;
+    --ring: 0.55 0.12 230;
+
+    --chart-1: 0.55 0.12 230;
+    --chart-2: 0.55 0.13 195;
+    --chart-3: 0.55 0.17 330;
+    --chart-4: 0.70 0.10 85;
+    --chart-5: 0.55 0.13 158;
+
+    --sidebar: 0.10 0.01 240; /* Deeper */
+    --sidebar-foreground: 0.90 0.008 240;
+    --sidebar-primary: 0.55 0.12 230;
+    --sidebar-primary-foreground: 1 0 240;
+    --sidebar-accent: 0.15 0.01 240;
+    --sidebar-accent-foreground: 0.92 0.008 240;
+    --sidebar-border: 0.20 0.01 240;
+    --sidebar-ring: 0.55 0.12 230;
+
+    --gradient-indigo: linear-gradient(135deg, oklch(0.45 0.10 230), oklch(0.55 0.12 230));
+    --gradient-cyan: linear-gradient(135deg, oklch(0.50 0.13 195), oklch(0.55 0.15 195));
+    --shadow-card: 0 1px 2px oklch(0 0 0 / 0.2), 0 8px 24px -14px oklch(0 0 0 / 0.5);
+    --shadow-raised: 0 20px 45px -22px oklch(0 0 0 / 0.6);
+  }
+
+  * {
+    border-color: oklch(var(--border));
+  }
+
+  html {
+    background-color: oklch(var(--background));
+  }
+
+  body {
+    background-color: oklch(var(--background));
+    color: oklch(var(--foreground));
+    font-family: theme('fontFamily.sans');
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: theme('fontFamily.display');
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .surface-card {
+    background-color: oklch(var(--card));
+    border: 1px solid oklch(var(--border));
+    border-radius: calc(var(--radius) + 4px);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(2px);
+  }
+
+  .gradient-indigo {
+    background-image: var(--gradient-indigo);
+  }
+
+  .gradient-cyan {
+    background-image: var(--gradient-cyan);
+  }
+
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Ô nhập liệu dùng chung */
+  .field {
+    height: 2.5rem;
+    width: 100%;
+    border-radius: var(--radius);
+    border: 1px solid oklch(var(--border));
+    background-color: oklch(var(--background));
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.875rem;
+    outline: none;
+  }
+
+  .field:focus {
+    box-shadow: 0 0 0 2px oklch(var(--ring) / 0.4);
+  }
+}

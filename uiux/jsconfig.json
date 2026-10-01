@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "checkJs": false,
+    "jsx": "react-jsx"
+  },
+  "include": ["src/**/*.js", "src/**/*.jsx", "vite.config.js", "tailwind.config.js"],
+  "exclude": ["node_modules", "dist"]
+}
