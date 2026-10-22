@@ -1,10 +1,10 @@
-# 🏢 BizCare — Business Care
+#  BizCare — Business Care
 
 **Chăm sóc toàn diện cho doanh nghiệp** — Hệ thống Quản lý Doanh thu, Kho và Tính Thuế cho doanh nghiệp SMEs và hộ kinh doanh tại Việt Nam.
 
-## 📋 Tính năng chính
+##  Tính năng chính
 
-### 🔐 Phân quyền người dùng (RBAC)
+###  Phân quyền người dùng (RBAC)
 - **Admin / Chủ DN**: quyền hạn tối cao, quản lý tài khoản nhân viên
 - **Kế toán**: hóa đơn, báo cáo, thuế, khách hàng
 - **Nhân viên Kho**: nhập/xuất hàng, sản phẩm, tồn kho
@@ -12,27 +12,27 @@
 - Mật khẩu **băm một chiều bằng bcrypt** (không thể giải ngược), hỗ trợ người dùng tự đổi mật khẩu
 - **Giới hạn tần suất (rate-limit)** cho các endpoint đăng nhập / OTP / đặt lại mật khẩu
 
-### 📦 Quản lý Kho & Nhập hàng
+###  Quản lý Kho & Nhập hàng
 - Phiếu nhập hàng chi tiết: mã SP, số lượng, giá nhập, VAT đầu vào
 - Tự động cộng tồn kho và tính **giá vốn bình quân gia quyền** khi xác nhận nhập kho
 - Phiếu xuất hàng kiểm tra & trừ tồn kho, chặn bán vượt tồn
 - **Lịch sử xuất – nhập kho lấy 100% từ thao tác thật**: mỗi bản ghi sinh ra khi nhập kho, xuất kho hoặc kiểm kê (không có dữ liệu chèn sẵn trong code)
 
-### 🛒 Hóa đơn & Thanh toán
+###  Hóa đơn & Thanh toán
 - Tạo hóa đơn bán lẻ / hóa đơn điện tử VAT từ phiếu xuất đã xuất kho
 - Sinh **mã VietQR động chuẩn EMVCo / NAPAS 247** (payload TLV + CRC16) theo số tiền hóa đơn
 
-### 💰 Động cơ Tính Thuế tự động
+###  Động cơ Tính Thuế tự động
 - **Hộ kinh doanh**: thuế khoán theo doanh thu
 - **DN SMEs (GTGT)**: khấu trừ = đầu ra − đầu vào
 - **DN SMEs (TNDN)**: thuế suất theo mức doanh thu
 - Lưu kết quả kê khai và xuất XML phục vụ nộp thuế
 
-### 📊 Báo cáo & Dashboard
+###  Báo cáo & Dashboard
 - P&L theo tháng / quý / năm: doanh thu thuần, COGS, lợi nhuận gộp, lãi ròng
 - Dashboard lấy số liệu trực tiếp từ chứng từ đã phát sinh
 
-### 🌗 Giao diện
+###  Giao diện
 - **Chế độ Sáng / Tối** chuyển ngay trên thanh tiêu đề, ghi nhớ lựa chọn trong `localStorage`
 
 ## 🛠 Tech Stack
@@ -44,7 +44,7 @@
 | Auth | JWT + OTP SMS |
 | Database | MongoDB Atlas |
 
-## 🚀 Hướng dẫn cài đặt
+##  Hướng dẫn cài đặt
 
 ### 1. Backend
 
@@ -86,7 +86,7 @@ npm run dev      # http://localhost:5173 (tự proxy /api sang cổng 3000)
 
 Nếu backend chạy ở cổng khác: `VITE_API_TARGET=http://localhost:3100 npm run dev`.
 
-## 👤 Tài khoản Demo
+##  Tài khoản Demo
 
 | Vai trò | Tên đăng nhập | Mật khẩu |
 |---------|---------------|-----------|
@@ -95,7 +95,7 @@ Nếu backend chạy ở cổng khác: `VITE_API_TARGET=http://localhost:3100 np
 | Thủ kho | kho01 | kho123 |
 | Nhân sự | nhanvien01 | ns123 |
 
-## 📂 Cấu trúc dự án
+##  Cấu trúc dự án
 
 ```
 BizCare/
@@ -119,7 +119,7 @@ BizCare/
 └── README.md
 ```
 
-## 📡 API Endpoints (tiền tố `/api/v1`)
+##  API Endpoints (tiền tố `/api/v1`)
 
 ### Auth
 - `POST /auth/login` — đăng nhập, nhận JWT
@@ -160,4 +160,3 @@ BizCare/
 
 ---
 
-📝 **Phiên bản**: 3.0.0 · Express + Mongoose + MongoDB Atlas · JavaScript thuần
